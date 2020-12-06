@@ -1,17 +1,26 @@
 # Выполнено ДЗ №
 
- - [ ] Основное ДЗ
- - [ ] Задание со *
+ - [+] Основное ДЗ
+ - [-] Задание со *
 
 ## В процессе сделано:
- - Пункт 1
- - Пункт 2
+ - Основное ДЗ, в том числе - собран docker image с простым python http server, 
+   опубликован - alexeyyakovlev1982/docker_simple_py_http_server_yakovlev
+ - 
 
 ## Как запустить проект:
- - Например, запустить команду X в директории Y
+ - Run: 
+     kubectl apply -f web-pod.yaml
+     kubectl port-forward --address 0.0.0.0 pod/web 8000:8000
+       
 
 ## Как проверить работоспособность:
- - Например, перейти по ссылке http://localhost:8080
+ - Check:
+   Run:
+     kuberctl get pods -n default
+     kuberctl describe pod web -n default
+   Open via browser:
+     http://localhost:8080/index.html
 
 ## PR checklist:
  - [ ] Выставлен label с темой домашнего задания
