@@ -6,7 +6,7 @@ metadata:
 subjects:
 - kind: ServiceAccount
   name: ken
-  apiGroup: ""
+  namespace: dev
 roleRef:
   kind: Role
   name: view
