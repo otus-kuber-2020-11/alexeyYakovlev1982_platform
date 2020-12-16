@@ -5,7 +5,7 @@ metadata:
   namespace: prometheus
 subjects:
 - kind: Group # User/Group/ServiceAccount
-  name: system:authenticated
+  name: system:serviceaccounts:prometheus
   apiGroup: rbac.authorization.k8s.io
 roleRef:
   kind: ClusterRole
