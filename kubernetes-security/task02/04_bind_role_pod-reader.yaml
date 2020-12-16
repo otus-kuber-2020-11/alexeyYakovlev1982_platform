@@ -10,4 +10,4 @@ subjects:
 roleRef:
   kind: ClusterRole
   name: pod-reader
-  apiGroup: rbac.authorization.k8s.io:q1
+  apiGroup: rbac.authorization.k8s.io
