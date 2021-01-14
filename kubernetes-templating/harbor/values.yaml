@@ -1,0 +1,37 @@
+expose:
+  type: ingress
+  tls:
+    enabled: true
+    certSource: auto
+  ingress:
+    hosts:
+      core: harbor.35.228.102.67.nip.io
+    controller: default
+    annotations:
+      ingress.kubernetes.io/ssl-redirect: "true"
+      ingress.kubernetes.io/proxy-body-size: "0"
+      nginx.ingress.kubernetes.io/ssl-redirect: "true"
+      nginx.ingress.kubernetes.io/proxy-body-size: "0"
+
+externalURL: https://harbor.35.228.102.67.nip.io
+
+logLevel: info
+
+# The initial password of Harbor admin. Change it from portal after launching Harbor
+harborAdminPassword: "Harbor12345"
+
+notary:
+  enabled: false
+
+metrics:
+  enabled: false
+  core:
+    path: /metrics
+    port: 8001
+  registry:
+    path: /metrics
+    port: 8001
+  exporter:
+    path: /metrics
+    port: 8001
+
